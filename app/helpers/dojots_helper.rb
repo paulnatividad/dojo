@@ -1,0 +1,2 @@
+module DojotsHelper
+end

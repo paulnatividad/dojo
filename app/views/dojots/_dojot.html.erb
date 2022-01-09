@@ -1,0 +1,40 @@
+<% if dojot.user == current_user %>
+<tr id="<%= dom_id dojot %>">
+  <td>
+    <!-- <strong>First name:</strong> -->
+    <%= link_to dojot.first_name + ' '+dojot.last_name, dojot %>
+  </td>
+
+  <td>
+  <!--<strong>Email:</strong>-->
+    <%= dojot.email %>
+  </td>
+
+  <td>
+  <!--<strong>Phone:</strong>-->
+    <%= dojot.phone %>
+  </td>
+
+  <td>
+  <!--<strong>Twitter:</strong>-->
+    <%= dojot.twitter %>
+  </td>
+  
+  <!--<td>
+    <%#= dojot.user_id %>
+  </td> -->
+    
+  <!--<td>
+    <%#= link_to "Show", dojot, class:"btn btn-primary btn-sm" %>
+  </td> 
+  <td>
+    <%#= link_to "Edit", edit_dojot_path(dojot), class:"btn btn-primary btn-sm" %>
+  </td>-->
+
+  <td>
+    <%= button_to "Delete", dojot, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-sm btn-outline-danger mx-auto btn-sm" %>
+  </td>
+  
+</tr>
+
+<% end %>
